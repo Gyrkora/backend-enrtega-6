@@ -1,0 +1,22 @@
+<h1>Vista de Productos</h1>
+<% if(getAll.length > 0){ %>
+<div id="products">
+	<% for (const producto of getAll) {%>
+	<div class="product">
+		<tr>
+			<td><%=producto.title%></td>
+			<td><%=producto.price%></td>
+			<img style="height: 2rem;" src=<%=producto.thumbnail%> alt="<%=producto.title%>">
+		</tr>
+		<%};%>
+
+        <br>
+
+		<a href="http://localhost:8080">
+			<button>ir a formulario</button>
+		</a>
+	</div>
+	<% } else{ %>
+        <h3 class="alert alert-danger">no se encontraron productos</h1>
+    <% } %>
+</div>

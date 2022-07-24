@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Gardenias",
+    "price": 80,
+    "thumbnail": "foto",
+    "id": 1
+  },
+  {
+    "title": "petunias",
+    "price": 70,
+    "thumbnail": "foto",
+    "id": 2
+  },
+  {
+    "title": "Rosas",
+    "price": 70,
+    "thumbnail": "foto",
+    "id": 3
+  }
+]

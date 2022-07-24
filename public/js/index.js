@@ -1,5 +1,6 @@
 // cliente socket.io
 const socket = io()
+// import productos from '../productos.ejs'
 
 // const productContainer = document.querySelector('#productContainer')
 const titleProd = document.getElementsByClassName('titulo').value
@@ -31,10 +32,11 @@ function renderProd(data) {
 	const html = data
 		.map((elem) => {
 			return `<div>
-            <strong>${elem.title}</strong>:
-            <em>${elem.price}</em> </div>`
+	    <strong>${elem.title}</strong>:
+	    <em>${elem.price}</em> </div>`
 		})
 		.join(' ')
+
 	productContainer.append(html)
 }
 

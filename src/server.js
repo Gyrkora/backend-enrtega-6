@@ -35,15 +35,15 @@ app.set('views', '../public')
 io.on('connection', (socket) => {
 	console.log('usuario connected !')
 
-	socket.on('productRequest', async () => {
-		const getAll = await products.getAll()
+	socket.on('productRequest', () => {
+		const getAll = products.getAll()
 		socket.emit('saveProd', getAll) //manda data
 	})
 
 	socket.on('addProd', async (data) => {
-		await products.save(data)
-		const allProds = await products.getAll()
-		io.sockets.emit('saveProd', allProds)
+		const saved = await products.save(data)
+		const allProds = products.getAll()
+		io.sockets.emit('saveProd', saved)
 	})
 })
 
